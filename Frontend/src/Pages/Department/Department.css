@@ -1,0 +1,199 @@
+.department-page {
+  padding: 20px;
+  background-color: hsl(244, 100%, 20%);
+  min-height: 100vh;
+}
+
+.department-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.department-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.department-card:hover {
+  transform: scale(1.03);
+}
+
+.dept-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: hsl(244, 100%, 20%);
+}
+
+.dept-staff {
+  font-size: 14px;
+  color: hsl(244, 100%, 20%);
+  margin-bottom: 15px;
+}
+
+.dept-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.add-btn {
+  margin-top: 20px;
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #27ae60;
+}
+
+.add-department-section {
+  margin-top: 30px;
+}
+
+.add-form {
+  margin: 20px auto;         /* centers it horizontally */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  width: 100%;               /* responsive: takes full width on small screens */
+  max-width: 500px;
+}
+
+.add-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.staff-input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.staff-input-box input {
+  flex: 1;
+}
+
+.staff-add-btn {
+  background-color: #8e44ad;
+  color: white;
+  height: 34px; /* match input box height */
+  padding: 12px; /* remove vertical padding, keep side padding */
+  display: flex;
+  align-items: center; /* vertically center text */
+  justify-content: center;
+  
+}
+
+.staff-add-btn:hover {
+  background-color: #6c3483;
+}
+
+.staff-list {
+  margin-top: 10px;
+}
+
+.staff-chip {
+  display: inline-flex; /* so text + button align properly */
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #2c3e50;
+}
+
+.remove-staff-btn {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  color: hsl(244, 100%, 20%);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-staff-btn:hover {
+  color: #c0392b;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 15px; /* adds spacing between buttons */
+}
+
+.done-btn,
+.cancel-btn {
+  flex: 1; /* makes both take equal width inside the flexbox */
+  padding: 12px 0; /* equal height */
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.done-btn {
+  background-color: #16a085;
+  color: white;
+}
+
+.done-btn:hover {
+  background-color: #13856e;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
