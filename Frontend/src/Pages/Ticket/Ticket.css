@@ -1,0 +1,71 @@
+.create-ticket-page{
+  background-color: hsl(244, 100%, 20%);
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;               
+  align-items: center;
+}
+
+
+.create-ticket {
+  flex: 1 1 auto; 
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px hsl(244, 94%, 12%); 
+}
+
+.create-ticket h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsl(244, 100%, 20%); 
+}
+
+.create-ticket form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-ticket label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(244, 100%, 20%); 
+}
+
+.create-ticket input,
+.create-ticket textarea,
+.create-ticket select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-ticket input:focus,
+.create-ticket textarea:focus,
+.create-ticket select:focus {
+  border-color: hsl(244, 100%, 20%); 
+  outline: none;
+}
+
+.create-ticket button {
+  background-color: hsl(244, 100%, 20%); 
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.create-ticket button:hover {
+  background-color: hsl(244, 65%, 42%); 
+}
