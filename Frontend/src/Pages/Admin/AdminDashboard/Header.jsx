@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import {
   BsFillBellFill,
@@ -10,6 +11,7 @@ import {
 
 function Header({ OpenSidebar }) {
   const [showSearch, setShowSearch] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="header">
@@ -29,7 +31,7 @@ function Header({ OpenSidebar }) {
       <div className="header-right">
         <BsFillBellFill className="icon" />
         <BsFillEnvelopeFill className="icon" />
-        <BsPersonCircle className="icon" />
+        <BsPersonCircle className="icon" onClick={() => navigate("/profile")} />
       </div>
     </header>
   );
