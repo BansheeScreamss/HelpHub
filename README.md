@@ -1,3 +1,4 @@
+# This is a test line
 # HelpHub — Frontend Documentation
 
 This document describes the frontend only (no backend details). The frontend is a React app built with Vite and contains UI, routing, styles, and small client-side behaviors.
