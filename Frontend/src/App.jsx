@@ -8,6 +8,7 @@ import Profile from "./Pages/UserProfile/Profile.jsx";
 import PendingTickets from "./Pages/Ticket/PendingTicket.jsx"; 
 import RequesterDashboard from "./Pages/Requester/RequesterDashboard.jsx";
 
+
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/department" element={<Department />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/requester-dashboard" element={<RequesterDashboard />} />
+          
         </Routes>
       </Router>
     </div>
