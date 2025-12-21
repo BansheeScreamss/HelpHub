@@ -6,29 +6,68 @@ function CreateTicket() {
     title: "",
     description: "",
     category: "",
+    priority: "",
   });
 
+  // Handle all input fields
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  // ----- Submit Ticket -----
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Ticket Data:", formData);
+
+    // FRONTEND VALIDATION
+    if (
+      !formData.title ||
+      !formData.description ||
+      !formData.category ||
+      !formData.priority
+    ) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // Create a temporary ticket object — backend-ready
+    const ticketData = {
+      id: Date.now(), // a simple unique ID for frontend (good enough)
+      ...formData,
+      date: new Date().toISOString(),
+      status: "Pending",
+    };
+
+    console.log("Ticket Submitted:", ticketData);
+
+    // BACKEND READY — this is where your backend call will go:
+    // ---------------------------------------------------------
+    // await axios.post("http://localhost:8000/api/tickets", ticketData);
+    // ---------------------------------------------------------
+
     alert("Ticket submitted successfully!");
-    
+
+    // Reset form
+    setFormData({
+      title: "",
+      description: "",
+      category: "",
+      priority: "",
+    });
   };
 
   return (
     <div className="create-ticket-page">
       <div className="create-ticket">
         <h2>Create New Ticket</h2>
+
         <form onSubmit={handleSubmit}>
-          <div>
+          {/* Title */}
+          <div className="form-group">
             <label>Title</label>
             <input
               type="text"
@@ -39,7 +78,8 @@ function CreateTicket() {
             />
           </div>
 
-          <div>
+          {/* Description */}
+          <div className="form-group">
             <label>Description</label>
             <textarea
               name="description"
@@ -50,7 +90,8 @@ function CreateTicket() {
             />
           </div>
 
-          <div>
+          {/* Department */}
+          <div className="form-group">
             <label>Department</label>
             <select
               name="category"
@@ -70,7 +111,27 @@ function CreateTicket() {
             </select>
           </div>
 
-          <button type="submit">Submit Ticket</button>
+          {/* Priority Selector */}
+          <div className="form-group">
+            <label>Priority</label>
+            <select
+              name="priority"
+              value={formData.priority}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Priority</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+          </div>
+
+          {/* Submit Button */}
+          <button type="submit" className="submit-ticket-btn">
+            Submit Ticket
+          </button>
         </form>
       </div>
     </div>

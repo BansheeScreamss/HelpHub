@@ -4,6 +4,7 @@ function Ticket() {
   return (
     <>
       <CreateTicket />
+      
     </>
   );
 }

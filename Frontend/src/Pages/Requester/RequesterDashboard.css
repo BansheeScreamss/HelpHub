@@ -1,0 +1,25 @@
+.card.blue { background-color: #386cfc; }
+.card.orange { background-color: #f08431; }
+.card.green { background-color: #61cb66; }
+
+.table-section {
+  margin-top: 40px;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.ticket-table th {
+  background: hsl(244, 100%, 20%);
+  color: white;
+}
