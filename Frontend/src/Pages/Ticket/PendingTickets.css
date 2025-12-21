@@ -1,0 +1,104 @@
+.pending-page {
+  padding: 30px;
+  background: hsl(244, 100%, 20%);
+  min-height: 100vh;
+  color: white;
+}
+
+.ticket-table {
+  width: 100%;
+  background: white;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ticket-table th {
+  background: #f0f0f0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.priority.high {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.priority.medium {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.priority.low {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* Buttons */
+.view-btn,
+.resolve-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+  color: white;
+}
+
+.view-btn {
+  background: #2980b9;
+}
+
+.resolve-btn {
+  background: #27ae60;
+}
+
+.delete-btn {
+  background: #c0392b;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  background: white;
+  color: #333;
+  padding: 25px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
